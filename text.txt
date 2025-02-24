@@ -1,0 +1,1 @@
+Acest    text are semne de pucNCtuaTie, litere MARI si mici si   spatii  multiple!
