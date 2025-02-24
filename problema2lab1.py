@@ -7,10 +7,13 @@ def read_file(filename):
 def remove_punctuation(text):
     return text.translate(str.maketrans('', '', string.punctuation))
 
+def rm_multiple_spaces(text):
+    return ' '.join(text.split())
 
 def process_text(filename):
     text = read_file(filename)
     text = remove_punctuation(text)
+    text = rm_multiple_spaces(text)
     return text
 
 def main():
