@@ -1,10 +1,10 @@
 from tkinter import *
-import operator
+from operator import add, sub, mul, truediv
 import re
 
 # Operatorii și prioritățile lor
-OPERATORS = {'+': (1, operator.add), '-': (1, operator.sub),
-             '*': (2, operator.mul), '/': (2, operator.truediv)}
+OPERATORS = {'+': (1, add), '-': (1, sub),
+             '*': (2, mul), '/': (2, truediv)}
 
 # Conversie expresie infixată în RPN folosind Shunting Yard Algorithm
 def infix_to_rpn(expression):
@@ -91,7 +91,7 @@ if __name__ == "__main__":
     for (text, row, col) in buttons:
         Button(gui, text=f' {text} ', fg='white', bg='blue', command=lambda t=text: press(t), height=1, width=7).grid(row=row, column=col)
 
-    Button(gui, text=' = ', fg='white', bg='blue', command=equalpress, height=1, width=7).grid(row=6, column=2)
+    Button(gui, text=' = ', fg='black', bg='blue', command=equalpress, height=1, width=7).grid(row=6, column=2)
     Button(gui, text='Clear', fg='white', bg='blue', command=clear, height=1, width=7).grid(row=6, column=1)
 
     gui.mainloop()
