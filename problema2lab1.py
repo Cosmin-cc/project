@@ -10,10 +10,14 @@ def remove_punctuation(text):
 def rm_multiple_spaces(text):
     return ' '.join(text.split())
 
+def to_lower(text):
+    return text.lower()
+
 def process_text(filename):
     text = read_file(filename)
     text = remove_punctuation(text)
     text = rm_multiple_spaces(text)
+    text = to_lower(text)
     return text
 
 def main():
